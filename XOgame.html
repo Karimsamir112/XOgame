@@ -1,0 +1,256 @@
+<html>
+
+
+<head>
+	
+	<title>XO game</title>
+	
+	
+	<style>
+		
+		
+		table{
+			position: absolute;
+			left: 30%;
+			top: 20%;
+			
+			
+		}
+		
+		.gm{
+			background-color: orange;
+			height: 120px;
+			width: 120px;
+			color:white;
+			font-size: 120px;
+			font-family: sans-serif;
+			text-align: center;
+			
+		}
+	
+	</style>
+	
+	
+	
+	
+	</head>
+<body>
+	
+	
+	
+	<table>
+	<tr>
+		
+		<td >  <div class="gm" id="n1" onclick="insert(this.id)" >  </div></td>
+		
+		<td>  <div class="gm" id="n2"  onclick="insert(this.id)">    </div></td>
+		
+		<td>  <div class="gm" id="n3"  onclick="insert(this.id)">    </div></td>
+		
+		</tr>
+	
+	
+		<tr>
+		
+		<td>  <div class="gm" id="n4"  onclick="insert(this.id)">   </div></td>
+		
+		<td>  <div class="gm" id="n5"  onclick="insert(this.id)">    </div></td>
+		
+		<td>  <div class="gm" id="n6"  onclick="insert(this.id)">    </div></td>
+		
+		</tr>
+		
+		
+		<tr>
+		
+		<td>  <div class="gm" id="n7"  onclick="insert(this.id)">   </div></td>
+		
+		<td>  <div class="gm" id="n8"  onclick="insert(this.id)">    </div></td>
+		
+			<td>  <div class="gm" id="n9"  onclick="insert(this.id)">    </div></td>
+		
+		</tr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</table>
+	
+	
+	
+	
+	
+	
+	
+	<script>
+		
+	var turn = true;
+	 
+		
+	function insert(id) {
+		var z = document.getElementById(id);
+		
+		
+		
+		if(turn && z.innerHTML !=="O") {
+		z.innerHTML="X";
+			turn = !turn;
+			}
+		
+		else if(z.innerHTML !=="X") {
+			
+			z.innerHTML="O";
+			turn = !turn;
+		}
+	}
+	
+	   
+		
+		function check1() {
+			
+			window.n2.style.color="white";
+				
+				window.n5.style.color="white";
+				
+				window.n8.style.color="white";
+			
+		if(window.n1.innerHTML==window.n2.innerHTML && window.n2.innerHTML==window.n3.innerHTML  ){
+			
+			window.n1.style.color="green";
+			window.n2.style.color="green";
+			window.n3.style.color="green";
+		}
+		
+	else	if (window.n1.innerHTML==window.n5.innerHTML && window.n5.innerHTML==window.n9.innerHTML){
+			
+			window.n1.style.color="green";
+			window.n5.style.color="green";
+			window.n9.style.color="green";
+		}
+			
+			else if(window.n1.innerHTML==window.n4.innerHTML && window.n4.innerHTML==window.n7.innerHTML){
+					
+				window.n1.style.color="green";
+			window.n4.style.color="green";
+			window.n7.style.color="green";
+					}
+			
+			else if(window.n2.innerHTML==window.n5.innerHTML && window.n5.innerHTML==window.n8.innerHTML) {
+					
+					window.n2.style.color="green";
+			window.n5.style.color="green";
+			window.n8.style.color="green";
+					}
+			
+			else if(window.n3.innerHTML==window.n6.innerHTML && window.n6.innerHTML==window.n9.innerHTML) {
+					
+					window.n3.style.color="green";
+			window.n6.style.color="green";
+			window.n9.style.color="green";
+					}
+		
+			else if(window.n4.innerHTML==window.n5.innerHTML && window.n5.innerHTML==window.n6.innerHTML) {
+					
+					window.n4.style.color="green";
+			window.n5.style.color="green";
+			window.n6.style.color="green";
+					}
+			
+			else if(window.n7.innerHTML==window.n8.innerHTML && window.n8.innerHTML==window.n9.innerHTML) {
+					
+					window.n7.style.color="green";
+			window.n8.style.color="green";
+			window.n9.style.color="green";
+					}
+			
+			else if(window.n3.innerHTML==window.n5.innerHTML && window.n5.innerHTML==window.n7.innerHTML) {
+					
+					window.n3.style.color="green";
+			window.n5.style.color="green";
+			window.n7.style.color="green";
+					}
+			else{
+					window.n2.style.color="white";
+				
+				window.n5.style.color="white";
+				
+				window.n8.style.color="white";
+				
+				window.n1.style.color="white";
+			
+				window.n3.style.color="white";
+				window.n4.style.color="white";
+				
+				window.n6.style.color="white";
+				window.n7.style.color="white";
+				
+				window.n9.style.color="white";
+				
+				
+			}
+	
+	}
+		
+		setInterval(check1 , 10);
+		
+		
+		
+		
+		
+		
+		
+		
+						 
+		
+		
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.23.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.23.0/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	</script>
+	
+	</body>
+
+
+
+
+
+
+
+
+
+
+</html>
